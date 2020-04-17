@@ -1,0 +1,75 @@
+
+title: Sample Demo App
+description: This is a sample server for a submit app.
+termsOfService: http://example.com/terms/
+contact:
+  name: API Support
+  url: http://www.example.com/support
+  email: support@example.com
+license:
+  name: Apache 2.0
+  url: https://www.apache.org/licenses/LICENSE-2.0.html
+version: 1.0.1
+
+servers:
+- url: https://localhost:8080/v1
+  description: Development server
+
+  paths:
+    
+​   /applications​/individual​:
+       post:
+         summary: submitting enrollement application
+      
+
+
+
+requestBody:
+  content:
+    'application/json':
+      required: true
+           
+      schema:
+         "$ref": "#/components/schemas/submitApplications"
+       
+         
+responses:
+      '200':
+        description: application submitted.
+        content:
+          application/json:
+            schema:
+              type: object
+       
+       
+components:
+  schemas:
+    Response:
+      type: object
+      properties:
+        application_id:
+          type: String
+        confiramtionNumber:
+          type: string
+          
+      submitApplications:
+        type: object
+        required:
+         properties:
+          application_id:
+            type: String
+          confiramtionNumber:
+            type: string
+          submitted_at:
+             type:String
+          created_at:
+             type:String
+          
+     
+    
+          
+        
+        
+       
+               
+   
