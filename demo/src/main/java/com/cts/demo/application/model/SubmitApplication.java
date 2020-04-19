@@ -10,17 +10,18 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 public class SubmitApplication {
 	
-private int id;
+    private int id;
 	
     private String status;
 
     private String tmg_id;
      
-    private Date created_at;
-    
-
-    private Date Submitted_at;
-    
+	
+	  private String created_at;
+	  
+	  
+	  private String submitted_at;
+	 
  
     private String app_filing_entity;
     
@@ -106,24 +107,47 @@ public void setJsonPayload(JsonNode jsonPayload) {
 	}
 
 
-	public Date getCreated_at() {
+	public String getCreated_at() {
 		return created_at;
 	}
 
 
-	public void setCreated_at(Date created_at) {
+	public void setCreated_at(String created_at) {
 		this.created_at = created_at;
 	}
 
 
-	public Date getSubmitted_at() {
-		return Submitted_at;
+	public String getSubmitted_at() {
+		return submitted_at;
 	}
 
 
-	public void setSubmitted_at(Date submitted_at) {
-		Submitted_at = submitted_at;
+	public void setSubmitted_at(String submitted_at) {
+		this.submitted_at = submitted_at;
 	}
+
+
+	
+
+
+	
+
+	
+
+	/*
+	 * public Date getCreated_at() { return created_at; }
+	 * 
+	 * 
+	 * public void setCreated_at(Date created_at) { this.created_at = created_at; }
+	 * 
+	 * 
+	 * public Date getSubmitted_at() { return Submitted_at; }
+	 */
+
+	/*
+	 * public void setSubmitted_at(Date submitted_at) { Submitted_at = submitted_at;
+	 * }
+	 */
     
     
 

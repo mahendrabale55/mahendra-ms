@@ -30,12 +30,15 @@ public class ApplicationEntity {
      
     @Column(name="tmg_id")
     private String tmg_id;
-     
+    
+    
     @Column(name="created_at")
-    private Date created_at;
+    private java.sql.Date created_at;
+ 
+    
     
     @Column(name="submitted_at")
-    private Date Submitted_at;
+    private java.sql.Date Submitted_at;
 	
     
    
@@ -48,9 +51,11 @@ public class ApplicationEntity {
      
     @Column(name="subscriber_id")
     private int subscriber_id;
+   
     
-    @Column(columnDefinition = "jsonb")
-    private JsonNode jsonPayload;
+    @Column(columnDefinition = "jsonb") 
+    private JsonNode json_Payload;
+	 
 
 	public int getId() {
 		return id;
@@ -80,24 +85,27 @@ public class ApplicationEntity {
 		return created_at;
 	}
 
-	public void setCreated_at(Date created_at) {
-		this.created_at = created_at;
-	}
-
-	public Date getSubmitted_at() {
-		return Submitted_at;
-	}
-
-	public void setSubmitted_at(Date submitted_at) {
-		Submitted_at = submitted_at;
-	}
-
+	
 	public String getApp_filing_entity() {
 		return app_filing_entity;
 	}
 
 	public void setApp_filing_entity(String app_filing_entity) {
 		this.app_filing_entity = app_filing_entity;
+	}
+
+	
+
+	public java.sql.Date getSubmitted_at() {
+		return Submitted_at;
+	}
+
+	public void setSubmitted_at(java.sql.Date submitted_at) {
+		Submitted_at = submitted_at;
+	}
+
+	public void setCreated_at(java.sql.Date created_at) {
+		this.created_at = created_at;
 	}
 
 	public int getTransaction_number() {
@@ -116,13 +124,12 @@ public class ApplicationEntity {
 		this.subscriber_id = subscriber_id;
 	}
 
-	public JsonNode getJsonPayload() {
-		return jsonPayload;
-	}
-
-	public void setJsonPayload(JsonNode jsonPayload) {
-		this.jsonPayload = jsonPayload;
-	}
+	
+	  public JsonNode getJson_Payload() { return json_Payload; }
+	  
+	  public void setJson_Payload(JsonNode json_Payload) { this.json_Payload =
+	  json_Payload; }
+	 
 
 	
 	
